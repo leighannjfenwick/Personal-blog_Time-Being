@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books on LA's Shelf</title>
+  <link rel="icon" href="favicon_LA.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .book-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .book {
+      display: flex;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 1em;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .book img {
+      width: 100px;
+      height: auto;
+      margin-right: 1em;
+      border-radius: 4px;
+    }
+
+    .book-details {
+      flex: 1;
+    }
+
+    .book-details h3 {
+      margin: 0 0 0.25em 0;
+    }
+
+    .form-section {
+      margin-top: 3em;
+      padding: 1em;
+      background-color: #eef5f0;
+      border-radius: 8px;
+    }
+
+    .form-section label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+
+    .form-section input,
+    .form-section textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.25em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-section button {
+      margin-top: 1em;
+      padding: 0.5em 1.5em;
+      background: #5a7d5a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-section button:hover {
+      background: #4c6c4c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Books on LA's Shelf</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="photos.html">Photos</a>
+      <a href="books.html">Books</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>May 2025</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="images/midnight-library.jpg" alt="The Midnight Library">
+          <div class="book-details">
+            <h3>The Midnight Library</h3>
+            <p><em>by Matt Haig</em></p>
+            <p>Existential, reflective, and full of ‘what ifs.’</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/lessons-in-chemistry.jpg" alt="Lessons in Chemistry">
+          <div class="book-details">
+            <h3>Lessons in Chemistry</h3>
+            <p><em>by Bonnie Garmus</em></p>
+            <p>Funny and fierce — a story of science, sexism, and standing up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Share Your Thoughts</h2>
+      <form>
+        <label for="book-title">Book Title:</label>
+        <input type="text" id="book-title" name="book-title">
+
+        <label for="book-author">Author:</label>
+        <input type="text" id="book-author" name="book-author">
+
+        <label for="your-thoughts">Your Thoughts:</label>
+        <textarea id="your-thoughts" name="your-thoughts" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p style="font-size: 0.9em; color: #777;">(This form is just visual for now — entries are not saved.)</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Leigh-Ann Fenwick</p>
+  </footer>
+</body>
+</html>
