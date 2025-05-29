@@ -36,47 +36,52 @@
       margin: 0 0 0.25em 0;
     }
 
-    <form id="thoughtForm">
-  <label for="book-title">Book Title:</label>
-  <input type="text" id="book-title" name="book-title" required>
+    <section class="form-section">
+  <h2>Share Your Reflections</h2>
+  <form id="reflectionForm">
+    <div>
+      <label for="form-type">Type:</label><br>
+      <select id="form-type" name="form-type">
+        <option value="thoughts">Thoughts</option>
+        <option value="recommendation">Recommendation</option>
+      </select>
+    </div>
 
-  <label for="book-author">Author:</label>
-  <input type="text" id="book-author" name="book-author" required>
+    <div>
+      <label for="book-title">Book Title:</label><br>
+      <input type="text" id="book-title" name="book-title" required>
+    </div>
 
-  <label for="your-thoughts">Your Thoughts:</label>
-  <textarea id="your-thoughts" name="your-thoughts" rows="4" required></textarea>
+    <div>
+      <label for="book-author">Author:</label><br>
+      <input type="text" id="book-author" name="book-author" required>
+    </div>
 
-  <button type="submit">Submit</button>
-</form>
+    <div>
+      <label for="user-input" id="dynamic-label">Your Thoughts:</label><br>
+      <textarea id="user-input" name="user-input" rows="4" required></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+  <p style="font-size: 0.9em; color: #4682B4;">
+    (This form is just visual for now — entries are not saved.)
+  </p>
+</section>
 
 <script>
-  document.getElementById('thoughtForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+  const formType = document.getElementById('form-type');
+  const dynamicLabel = document.getElementById('dynamic-label');
 
-    fetch('https://script.google.com/macros/s/AKfycbxqrGcDCdX_aiHBruh0nB7zN_QKyHhAS2QN9kbA-Qq-aK4Y1lJKgn3-Xvv4EG86vnFGMw/exec', {
-      method: 'POST',
-      body: JSON.stringify({
-        bookTitle: document.getElementById('book-title').value,
-        bookAuthor: document.getElementById('book-author').value,
-        thoughts: document.getElementById('your-thoughts').value
-      }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then(res => res.json())
-    .then(data => {
-      alert("Thank you! Your thoughts have been shared.");
-      document.getElementById('thoughtForm').reset();
-    })
-    .catch(err => {
-      alert("Something went wrong. Please try again.");
-      console.error(err);
-    });
+  formType.addEventListener('change', () => {
+    if (formType.value === 'thoughts') {
+      dynamicLabel.textContent = "Your Thoughts:";
+    } else {
+      dynamicLabel.textContent = "What did you like about this book?";
+    }
   });
 </script>
 
-    }
   </style>
 </head>
 <body>
