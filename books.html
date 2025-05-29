@@ -69,6 +69,10 @@
   </p>
 </section>
 
+  
+  </p>
+</section>
+
 <script>
   const formType = document.getElementById('form-type');
   const dynamicLabel = document.getElementById('dynamic-label');
@@ -160,5 +164,18 @@
   <footer>
     <p>&copy; 2025 Leigh-Ann Fenwick</p>
   </footer>
-</body>
+<script>
+  const formType = document.getElementById('form-type');
+  const dynamicLabel = document.getElementById('dynamic-label');
+
+  formType.addEventListener('change', () => {
+    if (formType.value === 'thoughts') {
+      dynamicLabel.textContent = "Your Thoughts:";
+    } else {
+      dynamicLabel.textContent = "What did you like about this book?";
+    }
+  });
+</script>
+
+  </body>
 </html>
