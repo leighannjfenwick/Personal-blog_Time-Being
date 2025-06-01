@@ -112,55 +112,80 @@
       </div>
     </section>
 
-    <section class="form-section">
-      <h2>Share Your Reflections</h2>
-      <form id="reflectionForm">
-        <div>
-          <label for="form-type">Type:</label><br>
-          <select id="form-type" name="form-type">
-            <option value="thoughts">Thoughts</option>
-            <option value="recommendation">Recommendation</option>
-          </select>
-        </div>
+    <form id="reflectionForm">
+  <div>
+    <label for="form-type">Type:</label><br>
+    <select id="form-type" name="form-type">
+      <option value="thoughts">Thoughts</option>
+      <option value="recommendation">Recommendation</option>
+    </select>
+  </div>
 
-        <div>
-          <label for="book-title">Book Title:</label><br>
-          <input type="text" id="book-title" name="book-title" required>
-        </div>
+  <div>
+    <label for="book-title">Book Title:</label><br>
+    <input type="text" id="book-title" name="book-title" required>
+  </div>
 
-        <div>
-          <label for="book-author">Author:</label><br>
-          <input type="text" id="book-author" name="book-author" required>
-        </div>
+  <div>
+    <label for="book-author">Author:</label><br>
+    <input type="text" id="book-author" name="book-author" required>
+  </div>
 
-        <div>
-          <label for="user-input" id="dynamic-label">Your Thoughts:</label><br>
-          <textarea id="user-input" name="user-input" rows="4" required></textarea>
-        </div>
+  <div>
+    <label for="user-input" id="dynamic-label">Your Thoughts:</label><br>
+    <textarea id="user-input" name="user-input" rows="4" required></textarea>
+  </div>
 
-        <button type="submit">Submit</button>
-      </form>
-      <p style="font-size: 0.9em; color: #4682B4;">
-        (This form is just visual for now — entries are not saved.)
-      </p>
-    </section>
+  <button type="submit">Submit</button>
+</form>
+
+<p style="font-size: 0.9em; color: #4682B4;">
+  (Your entry will be saved in Google Sheets.)
+</p>
+
+<script>
+  // Dynamic label switcher
+  const formType = document.getElementById('form-type');
+  const dynamicLabel = document.getElementById('dynamic-label');
+
+  formType.addEventListener('change', () => {
+    dynamicLabel.textContent = formType.value === 'thoughts'
+      ? "Your Thoughts:"
+      : "What did you like about this book?";
+  });
+
+  // Google Sheets form submission
+  document.getElementById('reflectionForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    fetch('https://script.google.com/macros/s/AKfycbwIJmdw5oYYsPTEshUaXYdpDZK3U9wytqdgk6BSzsd12Xu2LxnG4D0PCyW0MOx1mLUsxw/exec', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: document.getElementById('form-type').value,
+        title: document.getElementById('book-title').value,
+        author: document.getElementById('book-author').value,
+        message: document.getElementById('user-input').value
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      alert("Thank you! Your entry has been saved.");
+      document.getElementById('reflectionForm').reset();
+    })
+    .catch(err => {
+      alert("Oops! Something went wrong.");
+      console.error(err);
+    });
+  });
+</script>
+
   </main>
 
   <footer>
     <p>&copy; 2025 Leigh-Ann Fenwick</p>
   </footer>
 
-  <script>
-    const formType = document.getElementById('form-type');
-    const dynamicLabel = document.getElementById('dynamic-label');
-
-    formType.addEventListener('change', () => {
-      if (formType.value === 'thoughts') {
-        dynamicLabel.textContent = "Your Thoughts:";
-      } else {
-        dynamicLabel.textContent = "What did you like about this book?";
-      }
-    });
-  </script>
+  <!-- Removed duplicate script block to avoid redeclaration of formType and dynamicLabel -->
 </body>
 </html>
