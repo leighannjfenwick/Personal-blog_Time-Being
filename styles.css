@@ -1,3 +1,19 @@
+form div {
+  margin-bottom: 1em;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5em;
+  font-family: inherit;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
 /* Base page styling */
 body {
   font-family: 'Georgia', serif;
@@ -80,21 +96,3 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-form div {
-  margin-bottom: 1em;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  max-width: 500px;
-  padding: 0.5em;
-  font-family: inherit;
-}
-form input[type="submit"] {
-  background: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
