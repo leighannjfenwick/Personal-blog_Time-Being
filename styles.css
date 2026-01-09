@@ -1,109 +1,91 @@
-form div {
-  margin-bottom: 1em;
-}
+/* =========================
+   Global site styles
+   ========================= */
 
-form input,
-form select,
-form textarea {
-  width: 100%;
-  max-width: 500px;
-  padding: 0.5em;
-  font-family: inherit;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-
-/* Base page styling */
 body {
-  font-family: 'Georgia', serif;
-  color: #333;
-  background: #f9f9f9;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #2f2f2f;
+  line-height: 1.7;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
 }
 
-/* Header styles */
-header {
-  background: #ffffff;
-  padding: 1em;
-  border-bottom: 1px solid #e0e0e0;
-  text-align: center;
+/* Centered content column */
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  font-weight: normal;
+/* Navigation */
+nav {
+  margin-bottom: 3rem;
 }
 
-/* Navigation styles */
 nav a {
-  margin: 0 1em;
+  margin-right: 1rem;
   text-decoration: none;
-  color: #555;
-  font-size: 1em;
+  color: #2f2f2f;
+  border-bottom: 1px dotted #aaa;
 }
 
 nav a:hover {
-  color: #000;
+  border-bottom: 1px solid #000;
 }
 
-/* Main content area */
-main {
-  padding: 2em;
-  max-width: 700px;
-  margin: auto;
+/* Headings */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Article/blog post styling */
-article {
-  margin-bottom: 2.5em;
+h2 {
+  font-size: 1.6rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
-article h2 {
-  margin-bottom: 0.25em;
-  font-size: 1.5em;
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-article p {
-  margin-top: 0.5em;
-}
-
-/* Footer styling */
-footer {
-  text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
-  color: #999;
-  border-top: 1px solid #eee;
-  margin-top: 2em;
-}
-
-/* Photo gallery layout */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-}
-
-.gallery figure {
-  text-align: center;
-  max-width: 300px;
-  margin: 0;
-}
-
-.gallery img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.gallery figcaption {
-  margin-top: 0.5em;
-  font-size: 0.95em;
+/* Intro / muted text */
+.intro {
   color: #555;
+  font-style: italic;
+  margin-bottom: 3rem;
 }
 
+/* Dividers */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 4rem 0;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* =========================
+   Blog / Newsletter styles
+   ========================= */
+
+.newsletter {
+  margin-bottom: 5rem;
+}
+
+.newsletter-date {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
