@@ -1,25 +1,53 @@
-/* =========================
-   Global site styles
-   ========================= */
-
+/* -------------------- */
+/* General Body & Typography */
+/* -------------------- */
 body {
   font-family: Georgia, "Times New Roman", serif;
   color: #2f2f2f;
   line-height: 1.7;
   margin: 0;
   padding: 0;
+  background: #fff;
 }
 
-/* Centered content column */
+h1, h2, h3 {
+  line-height: 1.2;
+  color: #2f2f2f;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2em;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* -------------------- */
+/* Content Container */
+/* -------------------- */
 .content {
   max-width: 720px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
 
+/* -------------------- */
 /* Navigation */
+/* -------------------- */
 nav {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 nav a {
@@ -27,59 +55,25 @@ nav a {
   text-decoration: none;
   color: #2f2f2f;
   border-bottom: 1px dotted #aaa;
+  font-weight: bold;
 }
 
 nav a:hover {
   border-bottom: 1px solid #000;
 }
 
-/* Headings */
-h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Intro / muted text */
+/* -------------------- */
+/* Intro Section */
+/* -------------------- */
 .intro {
-  color: #555;
   font-style: italic;
+  color: #555;
   margin-bottom: 3rem;
 }
 
-/* Dividers */
-hr {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 4rem 0;
-}
-
-/* Lists */
-ul {
-  padding-left: 1.2rem;
-}
-
-/* Footer */
-footer {
-  margin-top: 5rem;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* =========================
-   Blog / Newsletter styles
-   ========================= */
-
+/* -------------------- */
+/* Blog / Newsletter Styling */
+/* -------------------- */
 .newsletter {
   margin-bottom: 5rem;
 }
@@ -88,4 +82,111 @@ footer {
   color: #666;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* -------------------- */
+/* Books Page Styling */
+/* -------------------- */
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-bottom: 3rem;
+}
+
+.book {
+  display: flex;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.book img {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-right: 1em;
+}
+
+.book-details h3 {
+  margin: 0 0 0.25em 0;
+}
+
+/* -------------------- */
+/* Forms */
+/* -------------------- */
+form div {
+  margin-bottom: 1em;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5em;
+  font-family: inherit;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-section {
+  margin-top: 3em;
+  background: #eef5f0;
+  padding: 1.5em;
+  border-radius: 8px;
+}
+
+.form-section button {
+  margin-top: 0.5em;
+  padding: 0.5em 1.5em;
+  background: #5a7d5a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background: #4c6c4c;
+}
+
+/* -------------------- */
+/* Footer */
+/* -------------------- */
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+/* -------------------- */
+/* Horizontal Rule */
+/* -------------------- */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 4rem 0;
+}
+
+/* -------------------- */
+/* Responsive Adjustments */
+/* -------------------- */
+@media (max-width: 600px) {
+  .book {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book img {
+    margin-bottom: 0.5em;
+  }
 }
