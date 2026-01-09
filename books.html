@@ -4,8 +4,62 @@
   <meta charset="UTF-8">
   <title>Books on LA's Shelf</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon_LA.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Book card styling */
+    .book-list {
+      margin-bottom: 3rem;
+    }
+
+    .book {
+      display: flex;
+      flex-wrap: wrap;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .book:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .book img {
+      max-width: 120px;
+      height: auto;
+      border-radius: 6px;
+      margin-right: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .book-details {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .book-details h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 1.2rem;
+      color: #2f2f2f;
+    }
+
+    .book-details p {
+      margin: 0.25rem 0;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    h2.month {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+      color: #333;
+    }
+  </style>
 </head>
 
 <body>
@@ -21,38 +75,251 @@
 
     <main>
 
+      <!-- ===================== -->
       <!-- DECEMBER 2025 -->
-      <section>
-        <h2>December 2025</h2>
-        <div class="book-list">
-          <div class="book">
-            <img src="images/milk_and_honey.jpg" alt="milk and honey">
-            <div class="book-details">
-              <h3>milk and honey</h3>
-              <p><em>by rupi kaur</em></p>
-            </div>
+      <!-- ===================== -->
+      <h2 class="month">December 2025</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="images/milk_and_honey.jpg" alt="milk and honey">
+          <div class="book-details">
+            <h3>milk and honey</h3>
+            <p><em>by rupi kaur</em></p>
           </div>
+        </div>
 
-          <div class="book">
-            <img src="images/the_sun_and_her_flowers.jpg" alt="the sun and her flowers">
-            <div class="book-details">
-              <h3>the sun and her flowers</h3>
-              <p><em>by rupi kaur</em></p>
-            </div>
+        <div class="book">
+          <img src="images/the_sun_and_her_flowers.jpg" alt="the sun and her flowers">
+          <div class="book-details">
+            <h3>the sun and her flowers</h3>
+            <p><em>by rupi kaur</em></p>
           </div>
+        </div>
 
-          <div class="book">
-            <img src="images/home_body.jpg" alt="home body">
-            <div class="book-details">
-              <h3>home body</h3>
-              <p><em>by rupi kaur</em></p>
-            </div>
+        <div class="book">
+          <img src="images/home_body.jpg" alt="home body">
+          <div class="book-details">
+            <h3>home body</h3>
+            <p><em>by rupi kaur</em></p>
           </div>
+        </div>
 
-          <div class="book">
-            <img src="images/demon_copperhead.jpg" alt="Demon Copperhead">
-            <div class="book-details">
-              <h3>Demon Copperhead</h3>
-              <p><em>by Barbara Kingsolver</em></p>
-              <p>“A ten-year-old getting high on pills. Foolish children... Children, choices. Ruin, that was the labor and materials we were given to work wi
-th.”</p>
+        <div class="book">
+          <img src="images/demon_copperhead.jpg" alt="Demon Copperhead">
+          <div class="book-details">
+            <h3>Demon Copperhead</h3>
+            <p><em>by Barbara Kingsolver</em></p>
+            <p>“A ten-year-old getting high on pills… Children, choices. Ruin, that was the labor and materials we were given to work with.” p.76</p>
+            <p>"I never realized what was holding me to my place on the planet of earth: that soundtrack." p.514</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- NOVEMBER 2025 -->
+      <!-- ===================== -->
+      <h2 class="month">November 2025</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="images/surfacing.jpg" alt="Surfacing">
+          <div class="book-details">
+            <h3>Surfacing</h3>
+            <p><em>by Margaret Atwood</em></p>
+            <p>“It's love, the ritual word, he wants to know again; but I can't give redemption, even as a lie…” p.133</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/pick_a_colour.jpeg" alt="Pick a Colour">
+          <div class="book-details">
+            <h3>Pick a Colour</h3>
+            <p><em>by Souvankham Thammavongsa</em></p>
+            <p>“Everyone is ugly… I can only work with what's in front of me.” p.1</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/how_to_pronounce_knife.jpeg" alt="How to Pronounce Knife">
+          <div class="book-details">
+            <h3>How to Pronounce Knife</h3>
+            <p><em>by Souvankham Thammavongsa</em></p>
+            <p>“The only love Red knew was that simple, uncomplicated, lonely love…”</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/the_diviners.jpg" alt="The Diviners">
+          <div class="book-details">
+            <h3>The Diviners</h3>
+            <p><em>by Margaret Laurence</em></p>
+            <p>“The river flowed both ways… This apparently impossible contradiction, made apparent and possible, still fascinated Morag…” p.3</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- OCTOBER 2025 -->
+      <!-- ===================== -->
+      <h2 class="month">October 2025</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="images/the_black_wolf.jpg" alt="The Black Wolf">
+          <div class="book-details">
+            <h3>The Black Wolf</h3>
+            <p><em>by Louise Penny</em></p>
+            <p>"The ludicrous happens every day. The unthinkable is made real not through rationale thought, but feelings…" p.133</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/the_grey_wolf.jpg" alt="The Grey Wolf">
+          <div class="book-details">
+            <h3>The Grey Wolf</h3>
+            <p><em>by Louise Penny</em></p>
+            <p>“Though there was the deep scar at his temple, which cut across the other lines.” p.3</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/circle_of_days.jpg" alt="Circle of Days">
+          <div class="book-details">
+            <h3>Circle of Days</h3>
+            <p><em>by Ken Follett</em></p>
+            <p>“Flint was the hardest of all stones, and Seft's father had a heart like flint…” p.3</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- JULY 2025 -->
+      <!-- ===================== -->
+      <h2 class="month">July 2025</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="images/the_stars_are_dying.jpg" alt="The Stars Are Dying">
+          <div class="book-details">
+            <h3>The Stars Are Dying</h3>
+            <p><em>by Chloe Penaranda</em></p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/the_night_is_defying.jpg" alt="The Night Is Defying">
+          <div class="book-details">
+            <h3>The Night Is Defying</h3>
+            <p><em>by Chloe Penaranda</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- JUNE 2025 -->
+      <!-- ===================== -->
+      <h2 class="month">June 2025</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="images/our_missing_hearts.jpg" alt="Our Missing Hearts">
+          <div class="book-details">
+            <h3>Our Missing Hearts</h3>
+            <p><em>by Celeste Ng</em></p>
+            <p>“When I can't sleep I count your freckles in my mind… On the inside of your elbow, on the side of your knee…”</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/the_history_of_love.jpg" alt="The History of Love">
+          <div class="book-details">
+            <h3>The History of Love</h3>
+            <p><em>by Nicole Krauss</em></p>
+            <p>“Sometimes I thought about nothing and sometimes I thought about my life. At least I made a living. What kind of living? A living. I lived. It wasn't easy. And yet. I found out how little is unbearable.”</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/the_cruel_prince2.jpg" alt="The Cruel Prince">
+          <div class="book-details">
+            <h3>The Cruel Prince</h3>
+            <p><em>by Holly Black</em></p>
+            <p>“In Faerie, there are no fish sticks, no ketchup, no television.”</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/the_wicked_king.jpg" alt="The Wicked King">
+          <div class="book-details">
+            <h3>The Wicked King</h3>
+            <p><em>by Holly Black</em></p>
+            <p>“Faerie is real. Magic is real.”</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/the_queen_of_nothing.jpg" alt="The Queen of Nothing">
+          <div class="book-details">
+            <h3>The Queen of Nothing</h3>
+            <p><em>by Holly Black</em></p>
+            <p>“I want to forget faerie. I want to forget you and Oak aren't human. I don't want to feel like this anymore.”</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/china_rich_girlfriend.jpg" alt="China Rich Girlfriend">
+          <div class="book-details">
+            <h3>China Rich Girlfriend</h3>
+            <p><em>by Kevin Kwan</em></p>
+            <p>“I know the average outfit in your wardrobe costs more than a semester of tuition at Princeton, but it makes you look like a community college during summertime: NO CLASS.” ~Corinna Ko-Tung</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- MAY 2025 -->
+      <!-- ===================== -->
+      <h2 class="month">May 2025</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="images/a_tale_for_the_time_being.jpg" alt="A Tale for the Time Being">
+          <div class="book-details">
+            <h3>A Tale for the Time Being</h3>
+            <p><em>by Ruth Ozeki</em></p>
+            <p>“A time being is someone who lives in time, and that means you, and me, and every one of us who is, or was, or ever will be.” ~Nao</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/onyx_storm.jpg" alt="Onyx Storm">
+          <div class="book-details">
+            <h3>Onyx Storm</h3>
+            <p><em>by Rebecca Yarros</em></p>
+            <p>The third book in the trilogy. After reading Fourth Wing and Iron Flame back-to-back, had to wait over a year for this trilogy. “What the actual fuck?” ~Violet</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/sunrise_on_the_reaping.jpg" alt="Sunrise on the Reaping">
+          <div class="book-details">
+            <h3>Sunrise on the Reaping</h3>
+            <p><em>by Suzanne Collins</em></p>
+            <p>The fifth book in the series. Lives up to the series--describes the second quarter quell and how Haymitch became a mentor for Katniss in the 74th Hunger Games. “I'm nobody's idea of a hero, Haymitch. But at least I'm still in the game.” ~Plutarch</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="images/the_new_menopause.jpg" alt="The New Menopause">
+          <div class="book-details">
+            <h3>The New Menopause</h3>
+            <p><em>by Mary Claire Haver, MD</em></p>
+            <p>“Menopause is inevitable. Suffering though it is not.”</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Leigh-Ann Fenwick</p>
+    </footer>
+  </div>
+</body>
+</html>
+
